@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Ads>
+  <Ad>
+    <Id>1</Id>
+    <Image>ads1.jpg</Image>
+  </Ad>
+  <Ad>
+    <Id>2</Id>
+    <Image>ads2.jpg</Image>
+  </Ad>
+  <Ad>
+    <Id>3</Id>
+    <Image>ads3.jpg</Image>
+  </Ad>
+  <Ad>
+    <Id>4</Id>
+    <Image>ads4.jpg</Image>
+  </Ad>
+  <Ad>
+    <Id>5</Id>
+    <Image>ads5.jpg</Image>
+  </Ad>
+</Ads>

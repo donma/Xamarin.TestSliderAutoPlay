@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9B9614E3-15AE-48D6-B7B6-9CD91FD935FC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ViewSliderSamples.Core</RootNamespace>
+    <AssemblyName>ViewSliderSamples.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile158</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="BindingProviders\BannerSlider\AdSliderBindingProvider.cs" />
+    <Compile Include="BindingProviders\ItemList\ItemListBindingProvider.cs" />
+    <Compile Include="BindingProviders\ItemList\DetailItemSliderBindingProvider.cs" />
+    <Compile Include="BindingProviders\ItemSlider\ItemSliderBindingProvider.cs" />
+    <Compile Include="BindingProviders\ImageSlider\ImageSliderBindingProvider.cs" />
+    <Compile Include="BindingProviders\Navigation\NavigationImageSliderBindingProvider.cs" />
+    <Compile Include="BindingProviders\SimpleBindingProvider.cs" />
+    <Compile Include="BindingProviders\NavigationBindingProvider.cs" />
+    <Compile Include="Converters\BooleanNegateConverter.cs" />
+    <Compile Include="Converters\TextLabelStyleConverter.cs" />
+    <Compile Include="Extensions\StreamExtensions.cs" />
+    <Compile Include="Infrastructure\AppService.cs" />
+    <Compile Include="Infrastructure\Container.cs" />
+    <Compile Include="ModelServices\AdRepository.cs" />
+    <Compile Include="ModelServices\CategoryRepository.cs" />
+    <Compile Include="ModelServices\IAdRepository.cs" />
+    <Compile Include="ModelServices\ICategoryRepository.cs" />
+    <Compile Include="ModelServices\IDataRepository.cs" />
+    <Compile Include="ModelServices\IEditableDataRepository.cs" />
+    <Compile Include="ModelServices\IItemRepository.cs" />
+    <Compile Include="ModelServices\ItemRepository.cs" />
+    <Compile Include="Models\Ad.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\CategoryGroup.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\ModelBase.cs" />
+    <Compile Include="ViewModels\AdSlider\StripIndicatorViewModel.cs" />
+    <Compile Include="ViewModels\AdSlider\BulletIndicatorViewModel.cs" />
+    <Compile Include="ViewModels\AdSlider\AutoSlideViewModel.cs" />
+    <Compile Include="ViewModels\AdSlider\SlideDirectionViewModel.cs" />
+    <Compile Include="ViewModels\AdSlider\AdSliderViewModel.cs" />
+    <Compile Include="ViewModels\ImageSlider\CircularImageSliderViewModel.cs" />
+    <Compile Include="ViewModels\ImageSlider\ImageSliderViewModel.cs" />
+    <Compile Include="ViewModels\ItemList\ItemListViewModel.cs" />
+    <Compile Include="ViewModels\ItemList\DetailItemSliderViewModel.cs" />
+    <Compile Include="ViewModels\NavigationViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BindingProviders\AboutBindingProvider.cs" />
+    <Compile Include="ViewModels\Base\SampleListViewModelBase.cs" />
+    <Compile Include="ViewModels\Base\SampleViewModelBase.cs" />
+    <Compile Include="ViewModels\DrawerViewModel.cs" />
+    <Compile Include="ViewModels\ItemSlider\ItemSliderViewModel.cs" />
+    <Compile Include="ViewModels\Navigation\NavigationImageSliderViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Intersoft.Crosslight">
+      <HintPath>..\..\lib\pcl\Intersoft.Crosslight.dll</HintPath>
+    </Reference>
+    <Reference Include="Intersoft.Crosslight.Services.ImageLoader">
+      <HintPath>..\..\lib\pcl\Intersoft.Crosslight.Services.ImageLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\Packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net40+sl4+win8+wp71+wpa81\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\Packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net40+sl4+win8+wp71+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO">
+      <HintPath>..\Packages\Microsoft.Bcl.1.1.8\lib\portable-net40+sl5+win8+wp8+wpa81\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>..\Packages\Microsoft.Bcl.1.1.8\lib\portable-net40+sl5+win8+wp8+wpa81\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>..\Packages\Microsoft.Bcl.1.1.8\lib\portable-net40+sl5+win8+wp8+wpa81\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Data\Categories.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\Category\2.jpg" />
+    <EmbeddedResource Include="Assets\Images\Category\3.jpg" />
+    <EmbeddedResource Include="Assets\Images\Category\4.jpg" />
+    <EmbeddedResource Include="Assets\Images\Category\5.jpg" />
+    <EmbeddedResource Include="Assets\Images\Category\6.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\AcerAspire.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\AppleIpadRetina.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\AppleMacBookProMD102.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\Bench.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\BionicStableGrip.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\CanonEF16-35mm.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\CanonSpeedlite580EX.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\Diamondback2013.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\Dumbbell.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\FenderFA-100.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\FenderStarcaster.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\FIFA2013.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\GranTurismo5.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\iPhone5.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\kindle.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\Kinect.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\Korg.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\lumia.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\MarshallMG4Carbon.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\MensRHTaylorMadeComplete.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\MU_AwayShirts.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\MU_HomeShirts.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\nexus7.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\NikeGolfVictoryHybrids.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\Pentax.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\Persona.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\Playstation_Move.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\Playstation_WirelessHeadset.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\PS3_NBA.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\RolandRD300.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\SamsungNoteII.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\SoccerShinguards.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\SonyPlaystation.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\SpaldingNBA.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\surface.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\TaylorMadeGolfR11.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\TrueLinkswearGolfShoes.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\YamahaPSRS750.jpg" />
+    <EmbeddedResource Include="Assets\Images\Large\YamahaPSRS950.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\AcerAspire.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\AppleIpadRetina.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\AppleMacBookProMD102.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\Bench.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\BionicStableGrip.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\CanonEF16-35mm.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\CanonSpeedlite580EX.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\Diamondback2013.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\Dumbbell.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\FenderFA-100.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\FenderStarcaster.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\FIFA2013.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\GranTurismo5.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\iPhone5.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\kindle.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\Kinect.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\Korg.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\lumia.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\MarshallMG4Carbon.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\MensRHTaylorMadeComplete.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\MU_AwayShirts.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\MU_HomeShirts.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\nexus7.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\NikeGolfVictoryHybrids.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\Pentax.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\Persona.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\Playstation_Move.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\Playstation_WirelessHeadset.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\PS3_NBA.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\RolandRD300.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\SamsungNoteII.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\SoccerShinguards.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\SonyPlaystation.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\SpaldingNBA.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\surface.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\TaylorMadeGolfR11.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\TrueLinkswearGolfShoes.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\YamahaPSRS750.jpg" />
+    <EmbeddedResource Include="Assets\Images\Thumbnail\YamahaPSRS950.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Data\Inventories.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\Large\CanonEOS5DMarkIII.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\Thumbnail\CanonEOS5DMarkIII.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\Category\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\Large\lumix.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\Thumbnail\lumix.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\Thumbnail\polaroid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\Large\polaroid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Data\Ads.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\Ad\ads1.jpg" />
+    <EmbeddedResource Include="Assets\Images\Ad\ads2.jpg" />
+    <EmbeddedResource Include="Assets\Images\Ad\ads3.jpg" />
+    <EmbeddedResource Include="Assets\Images\Ad\ads4.jpg" />
+    <EmbeddedResource Include="Assets\Images\Ad\ads5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component format="1" id="crosslight-ui-components">
+  <name>Crosslight UI Components</name>
+  <publisher>Intersoft Solutions Corp.</publisher>
+  <publisher-url>http://www.intersoftpt.com</publisher-url>
+  <version>4.0</version>
+  <summary>A collection of ready-to-use UI components for Crosslight.</summary>
+  <samples>
+    <sample id="ViewSliderSamples.Core">
+      <name>Crosslight View Slider Samples Core</name>
+      <summary>Crosslight View Slider Samples Core</summary>
+    </sample>
+    <sample id="ViewSliderSamples.iOS">
+      <name>iOS Crosslight View Slider App</name>
+      <summary>iOS Crosslight View Slider App</summary>
+    </sample>
+    <sample id="ViewSliderSamples.Android">
+      <name>Android Crosslight View Slider App</name>
+      <summary>Android Crosslight View Slider App</summary>
+    </sample>
+  </samples>
+</component>
